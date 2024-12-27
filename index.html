@@ -118,6 +118,28 @@
     position: relative;
     z-index: 1;
     text-align: center;
+     max-width: 1200px;
+    width: 90%;
+}
+        .certifications {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller devices */
+    margin-top: 15px;
+    gap: 15px; /* Adjusts space between items */
+}
+
+.certifications img {
+    width: 150px; /* Set a base size for images */
+    height: auto;
+    border-radius: 10px; /* Adds a slight curve to certification images */
+    transition: transform 0.3s ease; /* Hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.certifications img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
         
 
@@ -403,6 +425,14 @@ max-width: 100px; /* Adjust as needed */
     .pro{
         top:50px;
     }
+     .certifications {
+        flex-direction: column; /* Stack certifications vertically on smaller screens */
+        gap: 10px;
+    }
+
+    .certifications img {
+        width: 100px; /* Smaller size for images on mobile */
+    }
 
 
     
@@ -458,6 +488,15 @@ Agrostar is a premium organic fertilizer specially crafted through a blend of an
         </div>
     </div>
     <footer class="foot">
+        <div class="foot-content">
+        <h3>Our Certifications</h3>
+        <div class="certifications">
+            <img src="cert1.png" alt="Certification 1" />
+            <img src="cert2.png" alt="Certification 2" />
+            <img src="cert3.png" alt="Certification 3" />
+            <img src="cert4.png" alt="Certification 4" />
+        </div>
+    </div>
         
     </footer>
 
