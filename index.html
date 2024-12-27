@@ -79,20 +79,33 @@
         .nav-links a:hover {
             color: #FFD700;
         }
-        .foot{
-            height:100px;
-            width:100%;
-            background: linear-gradient(90deg, #4CAF50, #2A9D8F);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .foot {
+    position: relative;
+    background: linear-gradient(to top, #000000, #2A9D8F, #ffffff);
+    padding: 20px;
+    color: #ffffff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    overflow: hidden;
+}
 
-            bottom:0rem;
+.foot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), #ffffff);
+    border-radius: 10% 10% 0 0;
+    z-index: 0;
+}
 
-        }
-        .foot::after{
-            background: linear-gradient(to bottom, #4CAF50, #ffffff);
-            bottom:0rem;
-
-        }
+.foot-content {
+    position: relative;
+    z-index: 1;
+}
         .showcase-container{
             bottom:20px;
         }
@@ -358,6 +371,10 @@ max-width: 100px; /* Adjust as needed */
         padding:0px;
         margin-bottom:20px;
         }
+    .foot {
+        padding: 15px;
+        text-align: left;
+    }
     
           
 
